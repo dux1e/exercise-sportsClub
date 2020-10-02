@@ -1,4 +1,13 @@
 #BlueJ class context
 comment0.target=Club
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Club\ here.\r\n\r\n\ @author\ Joakim\ Christensen\ \ \r\n\ @version\ 01-10-2020\r\n
-numComments=1
+comment1.params=
+comment1.target=Club()
+comment2.params=
+comment2.target=java.util.ArrayList\ wonMoreGames()
+comment3.params=name
+comment3.target=Team\ findTeam(java.lang.String)
+comment4.params=team
+comment4.target=void\ addTeams(Team)
+comment5.params=teamName
+comment5.target=void\ deleteTeam(java.lang.String)
+numComments=6

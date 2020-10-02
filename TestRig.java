@@ -18,6 +18,30 @@ public class TestRig
     private Member member2;
     private Member member3;
     private Member member4;
+    private Team team2;
+    private Club club1;
+    private Member member5;
+
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
 
     
     
@@ -52,6 +76,14 @@ public class TestRig
         team1.listMembers();
         member4 = new Member(30, "Jacob", null, null);
         team1.addMember(member4);
+        team2 = new Team("konosuba", "aqua", 0, 100, 0);
+        club1 = new Club();
+        club1.addTeams(team1);
+        club1.addTeams(team2);
+        team1.listMembers();
+        team2.listMembers();
+        member5 = new Member(100, "Aqua", null, null);
+        team2.addMember(member5);
     }
 
     /**
