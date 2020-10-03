@@ -24,7 +24,7 @@ public class Member {
     public int getAge() {
         return age;
     }
-    
+
     public void printAge() {
         System.out.println(age);
     }
@@ -40,7 +40,7 @@ public class Member {
     public String getNumber() {
         return phoneNo;
     }
-    
+
     public void printInfo() {
         System.out.println("Members age: " + age);
         System.out.println("Members name: " + name);

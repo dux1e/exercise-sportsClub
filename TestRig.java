@@ -29,6 +29,15 @@ public class TestRig
     
     
     
+    
+
+    
+    
+    
+    
+    
+    
+    
 
     
     
@@ -84,6 +93,10 @@ public class TestRig
         team2.listMembers();
         member5 = new Member(100, "Aqua", null, null);
         team2.addMember(member5);
+        team1.listMembers();
+        member3.setAge(40);
+        team1.listMembers();
+        team1.getEldestMember();
     }
 
     /**

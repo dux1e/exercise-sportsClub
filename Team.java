@@ -67,14 +67,15 @@ public class Team {
             m = members.get(i);
             if(m.getAge() > maxAge) {
                 maxAge = m.getAge();
-                maxIndex = i;
+                maxIndex++;
             } else {
                 i++;
             }
         }
+        m = members.get(maxIndex);
         return m;
     }
-    
+
     public int countMembers() {
         Iterator<Member> it = members.iterator();
         int count = 0;
@@ -103,7 +104,7 @@ public class Team {
         }
         return m;
     }
-    
+
     public boolean gamesWonGreaterThanLost() {
         boolean GWGTL = false;
         if(getGamesWon() > getGamesLost()) {
