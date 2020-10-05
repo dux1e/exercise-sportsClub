@@ -28,44 +28,37 @@ public class Club {
         return teamsWonMoreThanLost;
     }
 
-    public Team findTeam(String name) {
+    public Member getEldesMember() {
+        int maxi = 0;
+        int i = 0;
+        Team t = teams.get(0);
+        int maxAge = t.getEldestMember().getAge();
+        while(i < teams.size()) {
+            t = teams.get(i);
+            if(t.getEldestMember().getAge() > maxAge) {
+                maxAge = t.getEldestMember().getAge();
+                maxi = i;
+            } else {
+                i++;
+            }
+        }
+        t = teams.get(maxi);
+        Member m = t.getEldestMember();
+        return m;
+    }
+
+    public Team findTeamByMemberName(String name) {
         Iterator<Team> it = teams.iterator();
         boolean found = false;
         Team t = null;
         while(!found && it.hasNext()) {
             t = it.next();
-            if(t.getMember(name).equals(name)) {
+            if(t.getMember(name).getName().equals(name)) {
                 found = true;
             }
         }
         return t;
     }
-    
-    public Team getEldestAll() {
-        ArrayList<Team> eldestList = new ArrayList<>();
-        int maxIndex = 0;
-        Team t = teams.get(0);
-        int maxAge = t.getEldestMember().getAge();
-        int i = 0;
-        while(i < teams.size()) {
-            t = teams.get(i);
-            if(t.getEldestMember().getAge() > maxAge) {
-                maxAge = t.getEldestMember().getAge();
-                maxIndex++;
-            } else {
-                i++;
-            }
-        }
-        t = teams.get(maxIndex);
-        return t;
-    }
-    
-    // public void getAllAges() {
-        // ArrayList<Team> eldestList = new ArrayList<>();
-        // for(Team t : teams) {
-            // eldestList.add(t.getEldestMember());
-        // }
-    // }
 
 
     // Mutator Functions

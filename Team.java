@@ -67,7 +67,7 @@ public class Team {
             m = members.get(i);
             if(m.getAge() > maxAge) {
                 maxAge = m.getAge();
-                maxIndex++;
+                maxIndex = i;
             } else {
                 i++;
             }
